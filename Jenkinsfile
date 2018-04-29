@@ -12,20 +12,20 @@ node {
 
        stage('Compiling'){
 
-          sh 'mvn clean install'
+          bat 'install'
        }
 	   
-      stage('Sonar') {
+      /*stage('Sonar') {
                     //add stage sonar
                     sh 'mvn sonar:sonar'
                 }
 	    
 	stage('Checkstyle') {
-                    sh 'mvn checkstyle:checkstyle'
+                    bat 'mvn checkstyle:checkstyle'
                 }
 
                stage('PMD') {
-                    sh 'mvn pmd:check'
+                    bat 'mvn pmd:check'
                 }
       /* stage('mail'){
 
@@ -39,6 +39,7 @@ node {
 	    
 
     }
+	/*
     catch (err) {
 
         currentBuild.result = "FAILURE"
@@ -48,7 +49,8 @@ node {
             replyTo: 'mithunreddytechnologies@gmail.com',
             subject: 'project build failed',
             to: 'mithunreddytechnologies@gmail.com'
-            */
+            
         throw err
+	*/
     }
 }
