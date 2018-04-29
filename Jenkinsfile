@@ -38,9 +38,8 @@ node {
 	    
 	    
 
-    }
-	/*
-    catch (err) {
+   
+   /* catch (err) {
 
         currentBuild.result = "FAILURE"
 
@@ -51,6 +50,6 @@ node {
             to: 'mithunreddytechnologies@gmail.com'
             
         throw err
-	*/
-    }
+
+    }*/
 }
